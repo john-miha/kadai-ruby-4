@@ -40,29 +40,28 @@
         <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
         <h2>送信内容</h2>
         <table class="table">
-            <tr>
-                <tbody>
-                    <tr>
-                        <th>会社名</th>
-                        <td><%= params["company"] %></td>
-                    </tr>
-                    <tr>
-                        <th>氏名</th>
-                        <td><%= params["name"] %></td>
-                    </tr>
-                    <tr>
-                        <th>メール</th>
-                        <td><%= params["mail"] %></td>
-                    </tr>
-                    <tr>
-                        <th>電話番号</th>
-                        <td><%= params["tel"] %></td>
-                    </tr>
-                        <th>内容</th>
-                        <td><%= params["content"] %></td>
-                    </tr>
-                </tbody>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>会社名</th>
+                    <td><%= params["company"] %></td>
+                </tr>
+                <tr>
+                    <th>氏名</th>
+                    <td><%= params["name"] %></td>
+                </tr>
+                <tr>
+                    <th>メール</th>
+                    <td><%= params["mail"] %></td>
+                </tr>
+                <tr>
+                    <th>電話番号</th>
+                    <td><%= params["tel"] %></td>
+                </tr>
+                <tr>
+                    <th>内容</th>
+                    <td><%= params["content"].gsub(/\r\n|\r|\n/, "<br>") %></td>
+                </tr>
+            </tbody>
         </table>
         <div class="text-center mb-4">
             <!-- 「戻る」ボタンを緑色にする設定を追加 -->
